@@ -27,7 +27,7 @@ export function Navbar() {
       // Scroll spy logic
       const sections = NAV_LINKS.map((link) => link.href.substring(1));
       let currentSection = sections[0];
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -55,7 +55,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#home" className="text-2xl font-heading font-bold text-primary">
-          V<span className="text-foreground">J</span>.
+          ~/<span className="text-foreground">vj.</span>
         </a>
 
         {/* Desktop Nav */}
