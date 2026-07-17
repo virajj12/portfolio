@@ -154,8 +154,8 @@ export function HeroSection() {
         <div 
           className="absolute inset-0"
           style={{
-            maskImage: "linear-gradient(to bottom, black 60%, transparent 100%), linear-gradient(to left, black 80%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%), linear-gradient(to left, black 80%, transparent 100%)",
+            maskImage: "linear-gradient(to bottom, transparent 0%, black 15%, black 60%, transparent 100%), linear-gradient(to left, black 80%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15%, black 60%, transparent 100%), linear-gradient(to left, black 80%, transparent 100%)",
             WebkitMaskComposite: "source-in",
             maskComposite: "intersect"
           }}
@@ -164,7 +164,7 @@ export function HeroSection() {
             src="/viraj.png" 
             alt="Viraj Jain" 
             fill 
-            className="object-cover object-top lg:object-center opacity-80 mix-blend-screen"
+            className="object-cover object-top lg:object-center opacity-60 md:opacity-80 mix-blend-screen transition-opacity"
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
           />
@@ -180,12 +180,12 @@ export function HeroSection() {
           
           <h1 
             ref={titleRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter mb-4 text-balance"
+            className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter mb-4 text-balance drop-shadow-lg"
           >
             {PORTFOLIO_DATA.hero.greeting} <span className="text-primary">{PORTFOLIO_DATA.name}</span>
           </h1>
           
-          <div ref={subtitleRef} className="h-[40px] md:h-[60px] flex items-center justify-center lg:justify-start mb-6 overflow-hidden w-full">
+          <div ref={subtitleRef} className="h-[40px] md:h-[60px] flex items-center justify-center lg:justify-start mb-6 overflow-hidden w-full drop-shadow-lg">
             <motion.p 
               key={roleIndex}
               initial={{ opacity: 0, y: 20 }}
@@ -200,7 +200,7 @@ export function HeroSection() {
           
           <p 
             ref={descriptionRef}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl text-balance mb-10"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl text-balance mb-10 drop-shadow-lg font-medium"
           >
             {PORTFOLIO_DATA.hero.valueProp}
           </p>

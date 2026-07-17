@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const NAV_LINKS = [
   { name: "Home", href: "#home" },
@@ -89,12 +88,10 @@ export function Navbar() {
           >
             Resume
           </a>
-          <ThemeToggle />
         </nav>
 
         {/* Mobile Nav Toggle */}
         <div className="flex md:hidden items-center gap-4">
-          <ThemeToggle />
           <button
             className="text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
