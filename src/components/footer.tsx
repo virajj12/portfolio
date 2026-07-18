@@ -25,7 +25,7 @@ export function Footer() {
               {PORTFOLIO_DATA.hero.valueProp}
             </p>
             <div className="flex items-center gap-4">
-              <a 
+              <a
                 href={PORTFOLIO_DATA.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export function Footer() {
               >
                 <FaGithub size={20} />
               </a>
-              <a 
+              <a
                 href={PORTFOLIO_DATA.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -41,7 +41,7 @@ export function Footer() {
               >
                 <FaLinkedin size={20} />
               </a>
-              <a 
+              <a
                 href={`mailto:${PORTFOLIO_DATA.email}`}
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
               >
@@ -49,13 +49,13 @@ export function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-heading font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {["Home", "About", "Skills", "Projects", "Contact"].map((link) => (
                 <li key={link}>
-                  <Link 
+                  <Link
                     href={`#${link.toLowerCase()}`}
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
@@ -65,9 +65,9 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div className="flex flex-col items-start md:items-end justify-between">
-            <button 
+            <button
               onClick={scrollToTop}
               className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors group"
               aria-label="Scroll to top"
@@ -76,11 +76,19 @@ export function Footer() {
             </button>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} {PORTFOLIO_DATA.name}. All rights reserved.</p>
           <p>
-            Designed & Built with Next.js, Tailwind CSS & Framer Motion
+            Designed & Built by me & an ungodly amount of AI, Special thanks to{" "}
+            <a
+              href="https://github.com/Naresh-Khatri/3d-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline transition-colors font-medium"
+            >
+              Naresh-Khatri
+            </a>
           </p>
         </div>
       </div>
