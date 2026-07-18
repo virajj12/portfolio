@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://viraj-jain.vercel.app"),
+  metadataBase: new URL("https://virajjain.vercel.app"),
   title: "Viraj Jain | Portfolio",
   description: "Computer Science Engineering Student & Full-Stack Developer",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "React",
     "Next.js"
   ],
-  authors: [{ name: "Viraj Jain", url: "https://viraj-jain.vercel.app" }],
+  authors: [{ name: "Viraj Jain", url: "https://virajjain.vercel.app" }],
   creator: "Viraj Jain",
   alternates: {
     canonical: "/",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Viraj Jain | Portfolio",
     description: "Computer Science Engineering Student & Full-Stack Developer",
-    url: "https://viraj-jain.vercel.app",
+    url: "https://virajjain.vercel.app",
     siteName: "Viraj Jain Portfolio",
     images: [
       {

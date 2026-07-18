@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://viraj-jain.vercel.app/sitemap.xml',
+    sitemap: 'https://virajjain.vercel.app/sitemap.xml',
   };
 }
