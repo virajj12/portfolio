@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     description: "Computer Science Engineering Student & Full-Stack Developer",
     images: ["/viraj.png"],
   },
+  verification: {
+    google: "WsyCp8HLphRFGiA_jc0j-Ofki8B3t1srYfa1eneVM70",
+  },
 };
 
 export default function RootLayout({
