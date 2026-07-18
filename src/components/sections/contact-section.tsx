@@ -121,7 +121,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm"
+            className="lg:col-span-3 bg-white/5 border border-white/10 rounded-2xl p-8"
           >
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
