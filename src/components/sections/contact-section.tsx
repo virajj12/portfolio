@@ -23,7 +23,7 @@ import { Textarea } from "@/components/ui/textarea";
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  message: z.string().min(5, "Message must be at least 5 characters"),
 });
 
 export function ContactSection() {
@@ -67,7 +67,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-24 relative bg-black/20">
       <div className="container mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -85,7 +85,7 @@ export function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -101,7 +101,7 @@ export function ContactSection() {
                 <p className="text-muted-foreground">{PORTFOLIO_DATA.location}</p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-xl text-primary mt-1">
                 <Mail size={24} />
@@ -116,7 +116,7 @@ export function ContactSection() {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -133,7 +133,7 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" className="bg-background/50 border-white/10 focus-visible:ring-primary" {...field} />
+                          <Input placeholder="Your name" className="bg-background/50 border-white/10 focus-visible:ring-primary" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -146,7 +146,7 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@example.com" className="bg-background/50 border-white/10 focus-visible:ring-primary" {...field} />
+                          <Input placeholder="your-name@example.com" className="bg-background/50 border-white/10 focus-visible:ring-primary" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -160,10 +160,10 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="How can I help you?" 
-                          className="min-h-[150px] bg-background/50 border-white/10 focus-visible:ring-primary resize-y" 
-                          {...field} 
+                        <Textarea
+                          placeholder="How can I help you?"
+                          className="min-h-[150px] bg-background/50 border-white/10 focus-visible:ring-primary resize-y"
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
