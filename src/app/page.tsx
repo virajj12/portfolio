@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/sections/hero-section";
-import { HeroTransition } from "@/components/sections/hero-transition";
 import { AboutSection } from "@/components/sections/about-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -13,15 +12,14 @@ export default function Home() {
     <div className="relative flex min-h-screen flex-col overflow-hidden">
       <Navbar />
       <main className="flex-1">
-        <HeroTransition hero={<HeroSection />}>
-          <AboutSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <ExperienceSection />
-          <ContactSection />
-          <Footer />
-        </HeroTransition>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
