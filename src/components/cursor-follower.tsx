@@ -79,7 +79,7 @@ function measure(el: HTMLElement): Base {
   const r = el.getBoundingClientRect();
   const style = window.getComputedStyle(el);
   let radius = WRAP_RADIUS;
-  
+
   const parsedRadius = parseFloat(style.borderRadius);
   if (!isNaN(parsedRadius) && parsedRadius > 0) {
     // Cap the radius to a perfect pill shape based on the cursor's padded height
@@ -142,7 +142,7 @@ export function CursorFollower() {
     const jellyEl = jellyRef.current;
     const dotEl = dotRef.current;
     if (!jellyEl || !dotEl) return;
-    
+
     // Center both on their coordinate via gsap transforms so the per-frame
     // x/y setters don't clobber a CSS translate.
     gsap.set(jellyEl, { xPercent: -50, yPercent: -50 });
@@ -293,7 +293,7 @@ export function CursorFollower() {
       active.base = measure(el);
       active.offX = 0;
       active.offY = 0;
-      jelly.x = pos.x; 
+      jelly.x = pos.x;
       jelly.y = pos.y;
       if (movesTarget) el.style.willChange = "transform";
     };
@@ -330,11 +330,11 @@ export function CursorFollower() {
       if (active.el) release();
       if (t) acquire(t);
     };
-    
+
     const onLeave = () => {
       if (active.el) release();
     };
-    
+
     const onScroll = () => {
       if (!active.el || !active.base) return;
       const r = active.el.getBoundingClientRect();
@@ -350,7 +350,7 @@ export function CursorFollower() {
     document.addEventListener("mouseleave", onLeave);
     window.addEventListener("blur", onLeave);
     window.addEventListener("scroll", onScroll, { passive: true });
-    
+
     return () => {
       document.removeEventListener("pointerover", onOver);
       document.removeEventListener("mouseleave", onLeave);
@@ -369,7 +369,7 @@ export function CursorFollower() {
         ref={jellyRef}
         id={"jelly-id"}
         className={cn(
-          "jelly-blob fixed left-0 top-0 border-2 border-primary pointer-events-none will-change-transform"
+          "jelly-blob fixed left-0 top-0 border-[1.5px] border-primary/70 bg-primary/20 pointer-events-none will-change-transform"
         )}
         style={{
           width: CURSOR_DIAMETER,
@@ -377,12 +377,12 @@ export function CursorFollower() {
           borderRadius: CURSOR_DIAMETER / 2,
           boxSizing: "border-box",
           zIndex: 100,
-          opacity: 0.6,
+          opacity: 1, // initialize at 1, GSAP handles hiding
         }}
       ></div>
       <div
         ref={dotRef}
-        className="w-2 h-2 bg-primary rounded-full fixed left-0 top-0 pointer-events-none will-change-transform"
+        className="w-2.5 h-2.5 bg-primary brightness-125 rounded-full fixed left-0 top-0 pointer-events-none will-change-transform"
         style={{
           opacity: 0,
           zIndex: 101,
