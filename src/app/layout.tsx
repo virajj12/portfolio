@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { CursorFollower } from "@/components/cursor-follower";
 import { CustomLenis } from "@/components/custom-lenis";
 import { Toaster } from "@/components/ui/sonner";
+import { CurveLoader } from "@/components/curve-loader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -81,6 +82,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <CustomLenis>
+            <CurveLoader />
             <CursorFollower />
             {children}
             <Toaster />
