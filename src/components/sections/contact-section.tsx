@@ -23,6 +23,7 @@ import { Textarea } from "@/components/ui/textarea";
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(2, "Subject must be at least 2 characters"),
   message: z.string().min(5, "Message must be at least 5 characters"),
 });
 
@@ -34,6 +35,7 @@ export function ContactSection() {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
@@ -153,6 +155,19 @@ export function ContactSection() {
                     )}
                   />
                 </div>
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Subject</FormLabel>
+                      <FormControl>
+                        <Input placeholder="What is this regarding?" className="bg-background/50 border-white/10 focus-visible:ring-primary" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
                 <FormField
                   control={form.control}
                   name="message"
