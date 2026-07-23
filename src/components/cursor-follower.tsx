@@ -376,7 +376,7 @@ export function CursorFollower() {
           height: CURSOR_DIAMETER,
           borderRadius: CURSOR_DIAMETER / 2,
           boxSizing: "border-box",
-          zIndex: 100,
+          zIndex: 999998,
           opacity: 1, // initialize at 1, GSAP handles hiding
         }}
       ></div>
@@ -385,7 +385,7 @@ export function CursorFollower() {
         className="w-2.5 h-2.5 bg-primary brightness-125 rounded-full fixed left-0 top-0 pointer-events-none will-change-transform"
         style={{
           opacity: 0,
-          zIndex: 101,
+          zIndex: 999999,
         }}
       ></div>
     </>
