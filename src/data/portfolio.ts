@@ -2,7 +2,7 @@ export const PORTFOLIO_DATA = {
   name: "Viraj Jain",
   email: "vjvirajjain122005@gmail.com",
   github: "https://github.com/virajj12",
-  linkedin: "https://linkedin.com/in/viraj-jain-a7ba682a1",
+  linkedin: "https://linkedin.com/in/viraj-jain25",
   location: "Karnataka, India",
   hero: {
     greeting: "Hi, I'm",
