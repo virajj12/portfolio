@@ -8,6 +8,7 @@ import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { ArrowRight, Mail, FileText } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ResumeViewer } from "@/components/resume-viewer";
+import { ConnectEmailMenu } from "@/components/connect-email-menu";
 
 function MagneticButton({ children, className, onClick }: { children: React.ReactNode, className?: string, onClick?: () => void }) {
   const ref = useRef<HTMLButtonElement>(null);
@@ -240,9 +241,11 @@ export function HeroSection() {
             <a href={PORTFOLIO_DATA.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform cursor-none">
               <FaLinkedin size={24} />
             </a>
-            <a href={`mailto:${PORTFOLIO_DATA.email}`} className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform cursor-none">
-              <Mail size={24} />
-            </a>
+            <ConnectEmailMenu>
+              <div className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform cursor-none cursor-pointer flex items-center justify-center">
+                <Mail size={24} />
+              </div>
+            </ConnectEmailMenu>
           </div>
 
         </div>

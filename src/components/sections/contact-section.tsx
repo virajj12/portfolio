@@ -8,6 +8,7 @@ import * as z from "zod";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Mail, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
+import { ConnectEmailMenu } from "@/components/connect-email-menu";
 
 import {
   Form,
@@ -110,9 +111,11 @@ export function ContactSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold font-heading mb-1">Email</h3>
-                <a href={`mailto:${PORTFOLIO_DATA.email}`} className="text-muted-foreground hover:text-primary transition-colors">
-                  {PORTFOLIO_DATA.email}
-                </a>
+                <ConnectEmailMenu>
+                  <div className="text-muted-foreground hover:text-primary transition-colors cursor-pointer cursor-none">
+                    {PORTFOLIO_DATA.email}
+                  </div>
+                </ConnectEmailMenu>
               </div>
             </div>
           </motion.div>

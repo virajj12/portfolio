@@ -43,7 +43,7 @@ const clamp = (v: number, min: number, max: number) =>
   Math.max(min, Math.min(max, v));
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-const CURSOR_DIAMETER = 48; // Updated from 50 to 48 as requested recently
+const CURSOR_DIAMETER = 60; // Updated from 50 to 48 as requested recently
 const WRAP_PADDING = 8; // breathing room when hugging a target
 const WRAP_RADIUS = 12; // corner radius while wrapped
 const WRAP_EASE = 0.2; // how fast the cursor snaps to/from a target

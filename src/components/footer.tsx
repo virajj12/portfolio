@@ -4,6 +4,7 @@ import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Mail, ArrowUp } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import { ConnectEmailMenu } from "@/components/connect-email-menu";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -37,16 +38,17 @@ export function Footer() {
                 href={PORTFOLIO_DATA.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors cursor-none"
               >
                 <FaLinkedin size={20} />
               </a>
-              <a
-                href={`mailto:${PORTFOLIO_DATA.email}`}
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
-              >
-                <Mail size={20} />
-              </a>
+              <ConnectEmailMenu>
+                <div
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors cursor-pointer cursor-none"
+                >
+                  <Mail size={20} />
+                </div>
+              </ConnectEmailMenu>
             </div>
           </div>
 
