@@ -81,17 +81,6 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} {PORTFOLIO_DATA.name}. All rights reserved.</p>
-          <p>
-            Designed & Built by me & an ungodly amount of AI, Special thanks to{" "}
-            <a
-              href="https://github.com/Naresh-Khatri/3d-portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline transition-colors font-medium"
-            >
-              Naresh-Khatri
-            </a>
-          </p>
         </div>
       </div>
     </footer>
